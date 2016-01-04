@@ -1,0 +1,29 @@
+#pragma once
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<math.h>
+#include<thread>
+
+using namespace std;
+
+class BMergeSort
+{
+private:
+	int threadNumber;
+	int size; // size of an array
+public:
+	// merge sort which uses Betcher's web to merge the buckets
+	// all actions are made using thread so the sort is done in parallel time
+	void merge_sort(vector<int>, int, int, int);
+	void mergeTwoBuckets(vector<int>&, int, int, int, int);
+
+	void heap_sort(vector<int>&, int, int);
+	//recovering heap
+	void shiftDown(vector<int>&, int, int, int);
+	void printResult(vector<int>, int);
+	BMergeSort(int, int);
+	~BMergeSort() {
+
+	}
+};
