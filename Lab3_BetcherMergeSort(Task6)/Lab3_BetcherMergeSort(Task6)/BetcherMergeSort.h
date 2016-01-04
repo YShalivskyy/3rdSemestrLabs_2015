@@ -15,14 +15,14 @@ private:
 public:
 	// merge sort which uses Betcher's web to merge the buckets
 	// all actions are made using thread so the sort is done in parallel time
-	void merge_sort(vector<int>, int, int, int);
-	void mergeTwoBuckets(vector<int>&, int, int, int, int);
+	void merge_sort(vector<int> array, int left, int rigth, int numberBuckets);
+	void mergeTwoBuckets(vector<int>& array, int left1, int right1, int left1, int right1);
 
-	void heap_sort(vector<int>&, int, int);
+	void heap_sort(vector<int>&, int begin, int end);
 	//recovering heap
-	void shiftDown(vector<int>&, int, int, int);
-	void printResult(vector<int>, int);
-	BMergeSort(int, int);
+	void shiftDown(vector<int>&, int i, int j, int shift);
+	void printResult(vector<int> array, int number);
+	BMergeSort(int number, int threadNumber);
 	~BMergeSort() {
 
 	}
